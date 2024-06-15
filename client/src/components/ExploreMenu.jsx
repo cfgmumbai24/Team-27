@@ -8,7 +8,8 @@ const ExploreMenu = ({ category, setCategory }) => {
 
   return (
     <div className='explore-menu' id='explore-menu'>
-      <h1>Explore Our Online Resources</h1>
+    <div className="explore">
+      <h1>Explore Our Online Resources</h1></div>
       <p className='explore-menu-text'>
         Eklavya is dedicated to bringing access to quality higher education and creating local role models at the grassroots level. Our channel serves as an opportunity platform for young people, providing them with essential resources and information to help them achieve their academic and professional goals. We share high-quality content on a variety of topics, including higher education, fellowships, and professional opportunities. Our aim is to empower our viewers with the knowledge and tools they need to succeed.
       </p>
@@ -41,7 +42,7 @@ const VideoGallery = ({ category }) => {
       {filteredVideos.map((video, index) => (
         <div key={index} className="video-item">
           <video width="320" height="240" controls poster={video.poster}>
-            <source src={video.src} type="video/mp4" />
+            <source src={video.url} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <p>{video.title}</p>

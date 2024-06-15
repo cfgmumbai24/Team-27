@@ -1,0 +1,8 @@
+.new {
+    background: url('../assets/background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.76;
+  }
+  

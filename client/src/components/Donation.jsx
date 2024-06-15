@@ -1,6 +1,6 @@
 import React from 'react';
 import './Donation.css';
-
+import image from '../assets/image.png'
 import { Link } from 'react-router-dom'
 function Donate() {
   return (
@@ -11,9 +11,8 @@ function Donate() {
       <main className="Donate-main">
         <section className="Donate-section">
           <h2>Why Donate?</h2>
-          <p>Eklavya is dedicated to improving access to quality higher education for first-generation students from marginalized communities through awareness, mentoring, and coaching interventions.</p>
-          <p>Your donation will directly support our programs and initiatives, helping us reach more students and make a meaningful impact.</p>
-        </section>
+          <img src={image} alt="" />
+          </section>
         <section className="Donate-form-section">
           <h2>Make a Donation</h2>
           <form className="Donate-form">
@@ -27,8 +26,9 @@ function Donate() {
             <textarea id="message" name="message" rows="4"></textarea>
             <button type="submit">Donate Now</button>
           </form>
-          <Link to='/'>Home</Link>
         </section>
+        
+        <Link to='/' className='home'>Home</Link>
       </main>
       <footer className="Donate-footer">
         <p>NGO Eklavya &copy; 2024. All rights reserved.</p>

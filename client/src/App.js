@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './App.css';
 import {Route, Routes } from 'react-router-dom';
 
@@ -6,7 +6,7 @@ import {Route, Routes } from 'react-router-dom';
 import Ekart from './components/Ekart';
 // import EkartProfile from './components/EkartProfile';
 import Login from './components/Login';
-import Home from './components/Home'
+import Home from './components/Home';
 import Signup from './components/Signup';
 import StudentDashboard from './components/StudentDashboard';
 import MentorDashboard from './components/MentorDashboard';
@@ -18,7 +18,8 @@ import Donate from './components/Donation';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">  
+    
       {/* <Header /> */}
       {/* <Switch> */}
       {/* <BrowserRouter> */}

@@ -5,13 +5,14 @@
     height: 100%;
     background-color: #00000090;
     display: grid;
-}
-
-.login-popup-container, .role-selection-container {
+  }
+  
+  .login-popup-container, .role-selection-container {
+    margin-top:-1800px;
     place-self: center;
     width: max(23vw, 330px);
     color: #808080;
-    background-color: white;
+    background-color: #EEF7FF; /* Light background color from the palette */
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -19,66 +20,79 @@
     border-radius: 8px;
     font-size: 14px;
     animation: fadeIn 0.5s;
-}
-
-.login-popup-title, .role-selection-title {
+  }
+  
+  .login-popup-title, .role-selection-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black;
-}
-
-.login-popup-title img, .role-selection-title img {
+    color: #4D869C; /* Updated to match the palette */
+  }
+  
+  .login-popup-title img, .role-selection-title img {
     cursor: pointer;
-}
-
-.login-popup-input {
+  }
+  
+  .login-popup-input {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.login-popup-input input {
+  }
+  
+  .login-popup-input input {
     outline: none;
-    border: 1px solid #c9c9c9;
+    border: 1px solid #CDE8E5; /* Light border color from the palette */
     padding: 10px;
     border-radius: 4px;
-}
-
-.login-popup-container button, .role-selection button {
+  }
+  
+  .login-popup-container button, .role-selection button {
     border: none;
     padding: 10px;
     border-radius: 4px;
     color: white;
-    background-color: tomato;
+    background-color: #4D869C; /* Updated to match the palette */
     font-size: 15px;
     cursor: pointer;
-}
-
-.login-condition {
+  }
+  
+  .login-condition {
     display: flex;
     align-self: start;
     gap: 8px;
     margin-top: -15px;
-}
-
-.login-condition input {
+  }
+  
+  .login-condition input {
     margin-top: 5px;
-}
-
-.login-popup p span {
-    color: tomato;
+  }
+  
+  .login-popup p span {
+    color: #7AB2B2; /* Updated to match the palette */
     font-weight: 500;
     cursor: pointer;
-}
-
-.role-selection {
+  }
+  
+  .role-selection {
     display: flex;
     flex-direction: column;
     gap: 15px;
     text-align: center;
-}
-
-.role-selection button {
+  }
+  
+  .role-selection button {
     margin-top: 10px;
-}
+  }
+  
+  @media (max-width: 770px) {
+    .login-popup-container, .role-selection-container {
+      margin-top: -1200px;
+    }
+  }
+  
+  @media (max-width: 470px) {
+    .login-popup-container, .role-selection-container {
+      margin-top: -1500px;
+    }
+  }
+  

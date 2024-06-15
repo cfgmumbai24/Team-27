@@ -19,3 +19,13 @@ code {
     monospace; */
     font-family: "Roboto", sans-serif;
 }
+#google_translate_element{
+  display: flex;
+  align-items: right;
+  justify-content: end;
+  background-color: red;
+}
+.abc{
+  display: flex;
+  align-items: right;
+}

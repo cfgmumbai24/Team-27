@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import awareness from '../assets/awareness.jpg';
+import mentoring from '../assets/mentoring.jpg';
+import coaching from '../assets/coaching.jpg';
 
 const Container = styled.div`
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
   background-color: #f9f9f9; /* Light background color */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center align text content */
+  text-align: center;
+  width: 100%; /* Ensure container covers entire width */
+  max-width: 100%; /* Ensure container does not exceed full width */
+  margin: 0 auto; /* Center align the container */
 `;
 
 const Section = styled.section`
@@ -89,7 +93,7 @@ const WhatWeDo = () => {
 
       <Section>
         <Subtitle>Awareness</Subtitle>
-        <LargeImage src="awareness.jpg" alt="Awareness" />
+        <LargeImage src={awareness} alt="Awareness" />
         <Paragraph>
           Students are introduced to quality higher education in premier institutes and modern career opportunities through workshops, both in person and online. Since 2017, Eklavya India Foundation has implemented a proven strategy focused on awareness, exposure, mentoring, and coaching, complemented by relatable role models. Our impact is evident: 700+ workshops reached a quarter million first-generation students. Our residential program guided 1,200+ students to secure admissions to 80+ leading national and international universities, alongside securing fellowships. Our 400 alumni, empowered with meaningful employment, serve as community inspirations.
         </Paragraph>
@@ -97,7 +101,7 @@ const WhatWeDo = () => {
         <GridContainer>
           <Section>
             <Subtitle>Mentoring</Subtitle>
-            <StyledImage src="mentoring.jpg" alt="Mentoring" />
+            <StyledImage src={mentoring} alt="Mentoring" />
             <StyledParagraph>
               We connect students with mentors matching their career interests. Additionally, we support them in college, hostel, and scholarship admissions. We ensure continuous mentoring throughout their education and career journey.
             </StyledParagraph>
@@ -105,7 +109,7 @@ const WhatWeDo = () => {
 
           <Section>
             <Subtitle>Coaching</Subtitle>
-            <StyledImage src="coaching.jpg" alt="Coaching" />
+            <StyledImage src={coaching} alt="Coaching" />
             <StyledParagraph>
               We provide free coaching for admission to reputed colleges and universities through online and offline courses. We also offer short-term preparation courses to help students succeed.
             </StyledParagraph>

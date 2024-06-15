@@ -7,8 +7,21 @@ import menu_3 from './menu_3.png'
 import menu_4 from './menu_4.png'
 import menu_5 from './menu_5.png'
 import scholarship from './scholarship.png'
+import scholarship1 from './scholarship1.png'
 import scholarship2 from './scholarship2.png'
 import scholarship3 from './scholarship3.png'
+import scholarship4 from './scholarship4.png'
+import mentor from './mentor.png'
+import scholarship5 from './scholarship5.png'
+import scholarship6 from './scholarship6.png'
+import scholarship7 from './scholarship7.png'
+import scholarship8 from './scholarship8.png'
+import scholarship9 from './scholarship9.png'
+
+
+
+
+
 
 
 
@@ -23,10 +36,6 @@ export const assets = {
 }
 
 export const menu_list = [
-    {
-        menu_name: " Global Scholar Program",
-        menu_image: menu_1
-    },
     {
         menu_name: "Online Workshop on Higher Studies",
         menu_image: menu_2
@@ -56,30 +65,16 @@ export const video_list = [
     },
     {
         url: video_1,
-        title: 'Introduction to Higher Education',
-        category: 'Global Scholar Program',
-        poster: scholarship2
-
-      },
-    {
-        url: video_1,
         title: 'Professional Opportunities in Tech',
       category: 'Chevening Scholarship Resources',
-      poster: scholarship
-
-    },
-    {
-        url: video_1,
-        title: 'Building a Local Role Model',
-      category: 'Online Workshop on Higher Studies',
-      poster: scholarship3
+      poster: scholarship1
 
     },
     {
         url: video_1,
         title: 'Introduction to Higher Education',
-        category: 'Global Scholar Program',
-        poster: scholarship
+        category: 'Higher Education Awareness',
+        poster: scholarship2
 
       },
 
@@ -94,44 +89,43 @@ export const video_list = [
         url: video_1,
         title: 'Introduction to Higher Education',
         category: 'Higher Education Awareness',
-        poster: scholarship2
+        poster: scholarship4
       },
       {
         url: video_1,
         title: 'Applying for Fellowships',
         category: 'Chevening Scholarship Resources',
-        poster: scholarship
+        poster: scholarship5
 
       },
       {
         url: video_1,
         title: 'Professional Opportunities in Tech',
-        category: 'Global Scholar Program',
-        poster: scholarship3
+        category: 'Online Workshop on Higher Studies',
+        poster: scholarship6
 
       },
       {
         url: video_1,
         title: 'Global Scholar Program',
         category: 'Foundation Course',
-        poster: scholarship3
+        poster: scholarship7
 
       },
       {
         url: video_1,
         title: 'Building a Local Role Model',
         category: 'Foundation Course',
-        poster: scholarship2
+        poster: scholarship8
 
       },
       {
         url: video_1,
         title: 'Building a Local Role Model',
         category: 'Foundation Course',
-        poster: scholarship2
+        poster: scholarship9
 
       }
-    // Add more video objects as needed
   ];
   
 
