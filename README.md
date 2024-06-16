@@ -78,24 +78,43 @@ Usage
 Access the application via http://localhost:3000.
 Sign up or log in as a student or mentor/admin.
 Authentication and Authorization
+
 Implement JWT authentication for secure login.
+
 Role-based access control to differentiate between student and mentor/admin functionalities.
+
 Student Registration Form
+
 After the first login, students fill out a registration form with personal and academic details.
+
 The form data is saved in the MongoDB database.
+
 Mentor List Page
+
 Students are redirected to a mentor list page post-registration.
+
 Students can view mentor profiles, book Zoom classes, and confirm bookings.
+
 Student Dashboard
+
 Displays the student’s current learning status, progress, and attendance.
+
 Allows students to view their booked classes and other educational details.
+
 Mentor/Admin Dashboard
+
 Shows all students’ statuses, attendance, and marks.
+
 Mentors can send WhatsApp notifications to students for updates and reminders.
+
 WhatsApp Notification
+
 Integrate WhatsApp API to enable mentors to notify students about important updates, class schedules, and more.
+
 Contributing
+
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
