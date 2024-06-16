@@ -29,19 +29,43 @@ const getMentorById = async (req, res) => {
 // Create a new mentor
 const createMentor = async (req, res) => {
     const {
-        name, email, contact, languages, password, subject, gender, about, qualification
+        firstname,
+        lastname,
+        email,
+        phoneNumber,
+        gender,
+        dob,
+        address,
+        state,
+        district,
+        pincode,
+        highestQualification,
+        currentOccupation,
+        yearsOfExperience,
+        skills,
+        linkedinProfile,
+        photo,
+        declaration
     } = req.body;
 
     const newMentor = new Mentor({
-        name,
+        firstname,
+        lastname,
         email,
-        contact,
-        languages,
-        password,
-        subject,
+        phoneNumber,
         gender,
-        about,
-        qualification
+        dob,
+        address,
+        state,
+        district,
+        pincode,
+        highestQualification,
+        currentOccupation,
+        yearsOfExperience,
+        skills,
+        linkedinProfile,
+        photo,
+        declaration
     });
 
     try {

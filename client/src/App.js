@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
 import {Route, Routes } from 'react-router-dom';
 
@@ -6,20 +6,22 @@ import {Route, Routes } from 'react-router-dom';
 import Ekart from './components/Ekart';
 // import EkartProfile from './components/EkartProfile';
 import Login from './components/Login';
-import Home from './components/Home';
+import Home from './components/Home'
 import Signup from './components/Signup';
+import RegistrationForm from './components/Registration/RegistrationForm';
+import MentorRegForm from './components/Registration/MentorRegForm';
 import StudentDashboard from './components/StudentDashboard';
 import MentorDashboard from './components/MentorDashboard';
 import Scholarship from './components/Scholarship';
 import Webinar from './components/Webinar';
 import Resources from './components/Resources';
 import Donate from './components/Donation';
+import MentorRegistrationForm from './components/Registration/MentorRegForm';
 // import WhatsAppNotification from './WhatsAppNotification';
 
 function App() {
   return (
-    <div className="App">  
-    
+    <div className="App">
       {/* <Header /> */}
       {/* <Switch> */}
       {/* <BrowserRouter> */}
@@ -28,7 +30,9 @@ function App() {
         <Route path="/" element ={<Home/>} />
         <Route path="/login"  element = {<Login />} />
         <Route path="/signup" element = {<Signup />} />
-        
+        {/* currently working on registration form. */}
+        <Route path="/register-form" element = {<RegistrationForm />} />
+        <Route path="/mentor-register-form" element = {<MentorRegForm />} />
         <Route path="/resources" element = {<Resources />} />
         <Route path="/ekart" element = {<Ekart />} />
         <Route path="/donation" element = {<Donate />} />

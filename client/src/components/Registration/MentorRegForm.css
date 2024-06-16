@@ -1,0 +1,158 @@
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #CDE8E5, #CDE8E5, #CDE8E5, #CDE8E5);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  margin-right: 10px; /* Add margin between radio buttons */
+}
+
+.wrapper {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+  border-radius: 0.6em;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center; /* Align all text center */
+}
+
+.wrapper .title {
+  font-size: 32px; /* Increased font size */
+  font-weight: 900;
+  margin-bottom: 25px;
+  color: #4D869C; 
+  text-transform: uppercase;
+}
+
+.wrapper .form {
+  width: 100%;
+}
+
+.wrapper .form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .form .form-group label {
+  width: 100%;
+  color: #1A2130;
+  margin-bottom: 8px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  text-align: left; /* Adjust as needed */
+}
+
+.wrapper .form .form-group select,
+.wrapper .form .form-group input[type="text"],
+.wrapper .form .form-group input[type="tel"],
+.wrapper .form .form-group input[type="email"],
+.wrapper .form .form-group input[type="date"],
+.wrapper .form .form-group input[type="number"],
+.wrapper .form .form-group input[type="file"],
+.wrapper .form .form-group textarea {
+  width: 100%; 
+  outline: none;
+  border: 1px solid #221efe;
+  font-size: 16px; /* Increased font size */
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.custom-select {
+  display: flex;
+}
+
+.wrapper .form .form-group input[type="email"],
+.wrapper .form .form-group input[type="tel"],
+.wrapper .form .form-group input[type="date"] {
+  width: calc(100% - 20px); /* Match width with other input fields */
+}
+
+.wrapper .form .form-group input:focus,
+.wrapper .form .form-group textarea:focus,
+.wrapper .form .form-group select:focus {
+  border: 1px solid #282881;
+}
+
+.wrapper .form .form-group .error {
+  font-size: 14px; /* Increased font size */
+  font-weight: 500;
+  color: #fe1e50;
+  margin-top: 5px;
+}
+
+.wrapper .form .bt-submit {
+    margin-left: 29%;
+    width: 40%;
+    padding: 15px; /* Increased padding for button */
+    font-size: 19px; /* Increased font size */
+    font-weight: bold;
+    border: 0px;
+    background: linear-gradient(to bottom right, #1A2130 0%, #282881 100%);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 20px; /* Adjust as needed */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+.wrapper .form .bt-submit:hover {
+  background: linear-gradient(to top left, #1A2130 0%, #282881 100%);
+  transform: scale(1.05); 
+}
+
+@media (max-width: 420px) {
+  .wrapper .form .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wrapper .form .form-group label {
+    margin-bottom: 5px;
+  }
+
+  .wrapper .form .form-group .bt-submit {
+    width: 100%;
+    font-size: larger;
+  }
+}
+
+.wrapper .form .form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="%23fe1e50"/></svg>');
+  background-size: 12px;
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
+  padding-right: 30px; 
+}

@@ -27,21 +27,59 @@ const getUserById = async (req, res) => {
 // Create a new user
 const createUser = async (req, res) => {
     const {
-        name, email, contact, district, address, state,
-        tenthMarks, twelfthMarks, languages, password
+        firstname,
+        lastname,
+        email,
+        phoneNumber,
+        gender,
+        age,
+        dob,
+        address,
+        state,
+        district,
+        pincode,
+        socialCategory,
+        mothersProfession,
+        fathersProfession,
+        fathersEducation,
+        mothersEducation,
+        boardIn12th,
+        collegeLocationIn10th,
+        mediumOfEducationIn12th,
+        mediumOfEducationInUG,
+        preparingForExams,
+        desiredInstitute,
+        interestOfStudy,
+        photo,
+        declaration
     } = req.body;
 
     const newUser = new User({
-        name,
-        email,
-        contact,
-        district,
-        address,
-        state,
-        tenthMarks,
-        twelfthMarks,
-        languages,
-        password
+        firstname,
+            lastname,
+            email,
+            phoneNumber,
+            gender,
+            age,
+            dob,
+            address,
+            state,
+            district,
+            pincode,
+            socialCategory,
+            mothersProfession,
+            fathersProfession,
+            fathersEducation,
+            mothersEducation,
+            boardIn12th,
+            collegeLocationIn10th,
+            mediumOfEducationIn12th,
+            mediumOfEducationInUG,
+            preparingForExams,
+            desiredInstitute,
+            interestOfStudy,
+            photo,
+            declaration
     });
 
     try {
