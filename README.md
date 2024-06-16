@@ -99,3 +99,6 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+Flow-chart of our WebApp
+![Screenshot 2024-06-16 060706](https://github.com/cfgmumbai24/Team-27/assets/128352039/ad5e4b25-b1a6-474e-9811-d8c34e525deb)
