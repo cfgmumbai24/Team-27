@@ -21,6 +21,9 @@ const lectureSchema = new mongoose.Schema({
     schedule: {
         type: Date,
         required: true
+    },
+    link:{
+        type: String,
     }
 });
 

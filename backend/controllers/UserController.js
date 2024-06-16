@@ -1,4 +1,4 @@
-const User = require('../models/userModel');
+const User = require('../models/User');
 
 // Get all users
 const getUsers = async (req, res) => {
@@ -24,38 +24,35 @@ const getUserById = async (req, res) => {
     }
 };
 
-// Create a new user
-const createUser = async (req, res) => {
-    const {
-        firstname,
-        lastname,
-        email,
-        phoneNumber,
-        gender,
-        age,
-        dob,
-        address,
-        state,
-        district,
-        pincode,
-        socialCategory,
-        mothersProfession,
-        fathersProfession,
-        fathersEducation,
-        mothersEducation,
-        boardIn12th,
-        collegeLocationIn10th,
-        mediumOfEducationIn12th,
-        mediumOfEducationInUG,
-        preparingForExams,
-        desiredInstitute,
-        interestOfStudy,
-        photo,
-        declaration
-    } = req.body;
+//LOGIN
+const login = async (req, res) => {
+    const { email,password } = req.body;
+    try {
+        const user = await User.findOne({email});
+        if (!user) {
+            return res.status(404).json({ message: 'Incorrect User or Password' });
+        }
+        if(password != user.password){
+            return res.status(401).json({message: 'Incorrect User or Password'});
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
 
-    const newUser = new User({
-        firstname,
+//SIGNUP
+const signup = async(req, res) => {
+    const { email,name,password,contact } = req.body;
+    console.log(req.body);
+    try {
+        let user = await User.findOne({email});
+        if (user) {
+            return res.status(403).json({ message: ' User already Exists'});
+        }
+        
+        const newUser = new User({
+            firstname,
             lastname,
             email,
             phoneNumber,
@@ -80,15 +77,50 @@ const createUser = async (req, res) => {
             interestOfStudy,
             photo,
             declaration
-    });
+        });
+    
+            const savedUser = await newUser.save();
+            res.status(201).json(savedUser);
+        } catch (error) {
+            res.status(400).json({ message: error.message });
+        }
+};
+
+
+
+// Create a new user
+const registerUser = async (req, res) => {
+    const {
+         email, contact, district, address, state,
+        tenthMarks, twelfthMarks, languages, password
+    } = req.body;
 
     try {
-        const savedUser = await newUser.save();
-        res.status(201).json(savedUser);
+        let user = await User.findOne({email});
+        if (!user) {
+            return res.status(404).json({ message: 'Incorrect User or Password' });
+        }
+        if(password !== user.password){
+            return res.status(401).json({message: 'Incorrect User or Password'});
+        }
+        user.contact = contact;
+        user.district = district;
+        user.address = address;
+        user.state = state;
+        user.tenthMarks = tenthMarks;
+        user.twelfthMarks = twelfthMarks;
+        user.languages = languages;
+
+        
+        await user.save();
+
+        res.status(200).json({ message: 'User details updated successfully', user });
+        
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 };
+
 
 // Update a user
 const updateUser = async (req, res) => {
@@ -157,8 +189,11 @@ const joinMentor = async (req,res) => {
 
 module.exports = {
     getUsers,
+    joinMentor,
     getUserById,
-    createUser,
+    login,
+    registerUser,
+    signup,
     updateUser,
     deleteUser
 };

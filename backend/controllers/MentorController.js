@@ -1,6 +1,6 @@
-const Mentor = require('../models/mentorModel');
-const User = require('../models/userModel');
-const Lecture = require('../models/lectureModel');
+const Mentor = require('../models/Mentor');
+const User = require('../models/User');
+const Lecture = require('../models/Lecture');
 
 // Get all mentors
 const getMentors = async (req, res) => {
@@ -21,6 +21,23 @@ const getMentorById = async (req, res) => {
             return res.status(404).json({ message: 'Mentor not found' });
         }
         res.status(200).json(mentor);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+//login
+const login = async (req, res) => {
+    const { email,password } = req.body;
+    try {
+        const user = await Mentor.findOne({email});
+        if (!user) {
+            return res.status(404).json({ message: 'Incorrect User or Password' });
+        }
+        if(password != user.password){
+            return res.status(401).json({message: 'Incorrect User or Password'});
+        }
+        res.status(200).json(user);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -48,6 +65,7 @@ const createMentor = async (req, res) => {
         declaration
     } = req.body;
 
+    console.log(req.body);
     const newMentor = new Mentor({
         firstname,
         lastname,
@@ -66,6 +84,7 @@ const createMentor = async (req, res) => {
         linkedinProfile,
         photo,
         declaration
+
     });
 
     try {
@@ -75,6 +94,7 @@ const createMentor = async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 };
+
 
 // Update a mentor
 const updateMentor = async (req, res) => {
@@ -111,6 +131,7 @@ const deleteMentor = async (req, res) => {
 
 module.exports = {
     getMentors,
+    login,
     getMentorById,
     createMentor,
     updateMentor,

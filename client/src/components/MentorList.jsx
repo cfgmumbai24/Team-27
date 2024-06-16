@@ -1,10 +1,12 @@
 import React from 'react'
 import './MentorList.css'
+import { Link } from 'react-router-dom'
 
 function MentorList() {
   return (
     <>
         <h1>Select Mentor</h1>
+        <Link to="/student-dashboard">
         <div class="card-list">
             <a href="#" class="card-item">
                 <img src="https://static.toiimg.com/thumb/msid-96495406,width-400,resizemode-4/96495406.jpg" alt="Card Image"/>
@@ -22,6 +24,7 @@ function MentorList() {
                 <h3>Pooja's journey to CLAT success is an embodiment of resilience. Hailing from an underprivileged family in Maharashtra, she faced numerous challenges. Yet, her passion for law and unwavering determination fueled her late nights studying under flickering lights. Pooja's unwavering spirit and dedication to her dream helped her conquer the competitive CLAT exam.</h3>
             </a>
         </div>
+        </Link>
     </>
   )
 }

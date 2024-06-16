@@ -1,0 +1,165 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: #4d869c;
+  border-radius: 20px;
+}
+
+.app-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left-column,
+.right-column {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 30%;
+}
+
+.right-column {
+  flex: 2;
+  max-width: 65%;
+}
+
+.data-container {
+  background-color: #7ab2b2;
+}
+.notice-container {
+  background-color: #cde8e5;
+}
+.zoom-container {
+  background-color: #cde8e5;
+}
+.data-container,
+.homework-container,
+.notice-container,
+.zoom-container {
+  /* background-color: #7ab2b2; */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.student-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.data-title,
+.homework-title,
+.notice-title,
+.zoom-title {
+  font-size: 1.5em;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.data-info,
+.homework-assignment-title,
+.homework-assignment-description,
+.notice-item-title,
+.notice-item-description,
+.zoom-item-title,
+.zoom-item-date,
+.zoom-item-time {
+  font-size: 1em;
+  margin-top: 10px;
+  text-align: center;
+  color: #555;
+}
+
+.homework-list,
+.notice-list,
+.zoom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.homework-item,
+.notice-item,
+.zoom-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.notice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-button,
+.zoom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notice-button {
+  background-color: #4d869c;
+  color: white;
+}
+
+.notice-button:hover {
+  background-color: #0056b3;
+}
+
+.zoom-button.join-button {
+  background-color: #4d869c;
+  color: white;
+}
+
+.zoom-button.join-button:hover {
+  background-color: #0056b3;
+}
+
+.zoom-button.attendance-button {
+  background-color: #364a52;
+  color: white;
+}
+
+.zoom-button.attendance-button:hover {
+  background-color: #4d869c;
+}
+
+.zoom-item-content {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.zoom-item-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.notice-link {
+  display: block;
+  margin-top: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.notice-link:hover {
+  text-decoration: underline;
+}

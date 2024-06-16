@@ -349,7 +349,7 @@ const RegistrationForm = () => {
               </label>
               <ErrorMessage name="declaration" component="div" className="error" />
             </div>
-              <Link to="https://localhost:8080/user/register">
+              <Link to="/mentor-selection">
               <button type="submit" className="btn-submit">Submit</button>
               </Link>
 

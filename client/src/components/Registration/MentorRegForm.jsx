@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './MentorRegForm.css';
@@ -215,7 +216,10 @@ const MentorRegistrationForm = () => {
             </div>
 
             <div className="form-group">
+
+              <Link to="/mentor-dashboard">
               <button type="submit" className="bt-submit">Submit</button>
+              </Link>
             </div>
             </div>
             </div>
