@@ -16,7 +16,11 @@ import Scholarship from './components/Scholarship';
 import Webinar from './components/Webinar';
 import Resources from './components/Resources';
 import Donate from './components/Donation';
+<<<<<<< HEAD
 import MentorRegistrationForm from './components/Registration/MentorRegForm';
+=======
+import MentorList from './components/MentorList';
+>>>>>>> 9f5b1fdd078fad2952c6012ad529b3e8d74128b7
 // import WhatsAppNotification from './WhatsAppNotification';
 
 function App() {
@@ -42,6 +46,7 @@ function App() {
         <Route path="/mentor-dashboard" element = {<MentorDashboard />} />
         <Route path="/scholarship" element = {<Scholarship />} />
         <Route path="/webinar" element = {<Webinar />} />
+        <Route path="/mentor-selection" element = {<MentorList/>} />
         </Routes>
         {/* </BrowserRouter> */}
       {/* </Routes> */}
